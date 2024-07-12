@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject mainMenuPanel;
-    public GameObject mainGame;
+    public PlayerController player;
+    public EnemyMovement enemy; 
 
+    public GameObject mainMenuPanel;
+   
     // Start is called before the first frame update
     void Start()
     {
+        player.speed = 0;
+        enemy.speed = 0;
         mainMenuPanel.SetActive(true);
+        
     }
     public void PlayGame()
     {
+        player.speed = 5f;
+        enemy.speed = 2f;
         mainMenuPanel.SetActive(false);
-        mainGame.SetActive(true);
+       
     }
 }
