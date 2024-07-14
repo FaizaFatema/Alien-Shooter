@@ -5,19 +5,15 @@ using UnityEngine;
 public class ProjectileShoot : MonoBehaviour
 {
     public GameObject leserPref;
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
+        Shoot();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Shoot()
     {
-        if (Input.GetButtonDown( "Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(leserPref, transform.position, Quaternion.identity);
         }
     }
-   
 }
