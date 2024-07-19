@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    public static ProjectileSpawner instance;
+   // public static ProjectileSpawner instance;
 
     public GameObject enemyProjectile;
 
@@ -16,10 +16,7 @@ public class ProjectileSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
+       
 
         spawnTimer = Random.Range(spawnMin, spawnMax);
     }
