@@ -297,7 +297,6 @@ MonoBehaviour:
   player: {fileID: 1256467282}
   enemy: {fileID: 1748699991}
   projectile: {fileID: 2524580268019953798, guid: 735f4bd86b2a9ec4b98f11166807921c, type: 3}
-  spawner: {fileID: 0}
   mainMenuPanel: {fileID: 302433683}
   gameOverPanel: {fileID: 216199548}
 --- !u!4 &165067664
@@ -2366,7 +2365,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.9595181, y: 2.7911193}
+  m_Offset: {x: -0.3500352, y: 2.6906552}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2377,7 +2376,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.1702757, y: 3.3552594}
+  m_Size: {x: 5.95131, y: 2.4041986}
   m_EdgeRadius: 0
 --- !u!114 &1748699991
 MonoBehaviour:

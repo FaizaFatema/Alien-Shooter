@@ -7,6 +7,8 @@ public class PlayerLives : MonoBehaviour
 {
     public int lives = 3;
     public Image[] livesUI;
+
+ //   public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,7 @@ public class PlayerLives : MonoBehaviour
                 if (i < lives)
                 {
                     livesUI[i].enabled = true;
+                    
                 }
                 else
                 {
@@ -61,7 +64,8 @@ public class PlayerLives : MonoBehaviour
             if (lives <= 0)
             {
                 GameManager.instance.GameOver();
-                Destroy(gameObject);
+                 Destroy(gameObject);
+               // player.SetActive(false);
             }
         }
     }

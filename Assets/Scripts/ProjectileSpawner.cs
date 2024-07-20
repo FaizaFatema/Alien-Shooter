@@ -24,12 +24,23 @@ public class ProjectileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnTimer -= Time.deltaTime;
-        if (spawnTimer <= 0)
-        { 
-            Instantiate(enemyProjectile, transform.position, Quaternion.identity); 
-            spawnTimer = Random.Range(spawnMin, spawnMax);
+        //spawnTimer -= Time.deltaTime;
+        //if (spawnTimer <= 0)
+        //{ 
+        //    Instantiate(enemyProjectile, transform.position, Quaternion.identity); 
+        //    spawnTimer = Random.Range(spawnMin, spawnMax);
 
+        //}
+
+        if (!GameManager.instance.IsGameOver())
+        {
+            spawnTimer -= Time.deltaTime;
+            if (spawnTimer <= 0)
+            {
+                Instantiate(enemyProjectile, transform.position, Quaternion.identity);
+                spawnTimer = Random.Range(spawnMin, spawnMax);
+
+            }
         }
     }
 }
