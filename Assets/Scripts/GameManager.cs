@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
         //  spawner = FindObjectOfType<ProjectileSpawner>();
 
         player.speed = 0;
-        enemy.speed = 0;
+      //  enemy.speed = 0;
 
         mainMenuPanel.SetActive(true);
         isGameOver = true;
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
     public void PlayGame()
     {
         player.speed = 5f;
-        enemy.speed = 2f;
+      //  enemy.speed = 2f;
 
         mainMenuPanel.SetActive(false);
         isGameOver = false;
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
-        enemy.speed = 0;
+       // enemy.speed = 0;
         isGameOver = true;
     }
     public bool IsGameOver()
@@ -66,6 +67,6 @@ public class GameManager : MonoBehaviour
 
         //    }
         //}
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
